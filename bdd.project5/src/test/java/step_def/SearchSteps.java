@@ -19,8 +19,8 @@ public class SearchSteps
     public void i_am_on_homepage()
     {
      String actualUrl = headerPage.getUrl();
-     assertThat(actualUrl,endsWith(".co.uk/"));
-//     assertThat(actualUrl,endsWith(".com"));
+   //  assertThat(actualUrl,endsWith(".co.uk/"));
+    assertThat(actualUrl,endsWith(".com"));
     }
 
     @When("^i search for product \"([^\"]*)\"$")
