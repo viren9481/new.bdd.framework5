@@ -74,7 +74,7 @@ public void handleCookie()
     public void takeScreenShot(Scenario scenario)
     {
         byte[] screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-        scenario.embed(screenShot,"imag/png");
+        scenario.embed(screenShot,"image/png");
     }
 
     public void closeBrowser()
