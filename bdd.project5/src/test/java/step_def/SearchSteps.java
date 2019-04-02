@@ -20,7 +20,7 @@ public class SearchSteps
     {
      String actualUrl = headerPage.getUrl();
     assertThat(actualUrl,endsWith(".co.uk/"));
-   // assertThat(actualUrl,endsWith(".com"));
+    assertThat(actualUrl,endsWith(".com"));
     }
 
     @When("^i search for product \"([^\"]*)\"$")
