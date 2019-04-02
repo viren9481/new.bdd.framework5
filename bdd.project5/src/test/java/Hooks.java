@@ -11,7 +11,7 @@ public class Hooks
     @Before
     public void setUp()
     {
-    driverManager.openBrowser();
+    driverManager.runOnLocalHost();
     driverManager.navigateTo("https://www.argos.co.uk/");
     driverManager.maxBrowser();
     driverManager.handleCookie();
