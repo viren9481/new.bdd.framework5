@@ -1,9 +1,8 @@
 package driver;
 
+import cucumber.api.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -72,6 +71,11 @@ public void handleCookie()
         return new WebDriverWait(driver,15).until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
 
+    public void takeScreenShot(Scenario scenario)
+    {
+        byte[] screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+        scenario.embed(screenShot,"imag/png");
+    }
 
     public void closeBrowser()
     {
